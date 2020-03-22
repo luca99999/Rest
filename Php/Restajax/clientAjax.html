@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+            
+<html>
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+	
+	 $('#getBtn').click(function() {
+	   $.get("restajax.php/studente/13", 
+	        { nome: "Pippo", cognome: "Pluto" },
+	        function( response ) {
+      			var strJson = jQuery.parseJSON(response);
+			    var stringa = "<tr>" + "<td align='center'>" + strJson.nome + "</td>" +
+                "<td align='center'>" + strJson.cognome + "</td>" + "</tr>";
+                $("#TabellaGET tbody").append(stringa);
+   
+             });
+	});
+
+    $('#postBtn').click(function(){
+		 $.ajax({
+			url: 'restajax.php/studente/13',
+			contentType: "application/json",
+			type: 'POST',
+			dataType: "json",
+			data: '{"nome": "paperino", "cognome": "paperone"}',
+			success: function(response, status, xhr) {
+			
+			var strJson = jQuery.parseJSON(response);
+			var stringa = "<tr>" + "<td align='center'>" + strJson.nome + "</td>" +
+                "<td align='center'>" + strJson.cognome + "</td>" + "</tr>";
+                $("#TabellaPost tbody").append(stringa);
+			} // success
+          }); //ajax
+	  }); //click
+	  
+	  
+	  $('#putBtn').click(function(){
+		 $.ajax({
+			url: 'restajax.php/studente/13',
+			contentType: "application/json",
+			type: 'PUT',
+			dataType: "json",
+			data: '{"nome": "topolino", "cognome": "topolina"}',
+			success: function(response, status, xhr) {
+			
+			var strJson = jQuery.parseJSON(response);
+			var stringa = "<tr>" + "<td align='center'>" + strJson.nome + "</td>" +
+                "<td align='center'>" + strJson.cognome + "</td>" + "</tr>";
+                $("#TabellaPut tbody").append(stringa);
+			} // success
+          }); //ajax
+	  }); //click
+	  
+	  $('#deleteBtn').click(function(){
+		 $.ajax({
+			url: 'restajax.php/studente/13',
+			contentType: "application/json",
+			type: 'DELETE',
+			dataType: "json",
+			data: '{"nome": "Qui", "cognome": "Quo"}',
+			success: function(response, status, xhr) {
+			
+			var strJson = jQuery.parseJSON(response);
+			var stringa = "<tr>" + "<td align='center'>" + strJson.nome + "</td>" +
+                "<td align='center'>" + strJson.cognome + "</td>" + "</tr>";
+                $("#TabellaDelete tbody").append(stringa);
+			} // success
+          }); //ajax
+	  }); //click
+	  
+    });
+	
+
+ 
+ </script>
+</head>
+
+<body>
+	<h1 align='center'> METODI&nbsp&nbsp&nbspGET&nbsp&nbsp-&nbsp&nbspPOST&nbsp&nbsp-&nbsp&nbspPUT&nbsp&nbsp-&nbsp&nbspDELETE</h1>
+	<p>
+	</p>
+	<input type="button" id="getBtn" value="GET" />
+	<p>
+	</p>
+	<div class="containerGET">
+		<table id="TabellaGET" border="1" >
+			<thead>
+				<tr>
+					<th width="20%">Nome</th>
+					<th width="20%">Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<p>
+	</p>
+	<input type="button" id="postBtn" value="POST" />
+	<p>
+	</p>
+	<div class="containerPOST">
+		<table id="TabellaPost" border="1" >
+			<thead>
+				<tr>
+					<th width="20%">Nome</th>
+					<th width="20%">Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<p>
+	</p>
+	<input type="button" id="putBtn" value="PUT" />
+	<p>
+	</p>
+	<div class="containerPUT">
+		<table id="TabellaPut" border="1" >
+			<thead>
+				<tr>
+					<th width="20%">Nome</th>
+					<th width="20%">Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<p>
+	</p>
+	<input type="button" id="deleteBtn" value="DELETE" />
+	<p>
+	</p>
+	<div class="containerDELETE">
+		<table id="TabellaDelete" border="1" >
+			<thead>
+				<tr>
+					<th width="20%">Nome</th>
+					<th width="20%">Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
