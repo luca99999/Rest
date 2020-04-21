@@ -8,21 +8,21 @@
 <h1>Programmazione in Javascript di dispositivi IoT con Packet Tracer</h1>
 
 <span style="font-family: Arial;">Packet Tracer ha introdotto
-funzionalità di IoT (Internet of Things) ed è quindi possibile inserire
+funzionalitÃ  di IoT (Internet of Things) ed Ã¨ quindi possibile inserire
 smart devices, sensori, attuatori e dispositivi che simulano <br>
 microcontrollori come Arduino e Raspberry Pi. Tutti questi dispositivi
 possono essere programmati in Javascript.<br>
-Nello scenario il sensore di temperatura è collegato al pin 0 (D0)
+Nello scenario il sensore di temperatura Ã¨ collegato al pin 0 (D0)
 della scheda SBC. <br>
 La funzione analogRead() legge il segnale analogico fornito dal sensore
-campionato su valori da 0 a 1023 su una mappatura da -100 ° C a +100 C.<br>
-Il Led è collegato al pin 1 (D1) della scheda SBC. La funzione&nbsp;
+campionato su valori da 0 a 1023 su una mappatura da -100 Â° C a +100 C.<br>
+Il Led Ã¨ collegato al pin 1 (D1) della scheda SBC. La funzione&nbsp;
 digitalWrite() scrive sullo slot digitale (pin D1) il valore ALTO
 (HIGH) o BASSO (LOW)<br>
 per accendere o spegnare il led.<br>
 Il Termostato ha la funzione di regolare la temperatura dell'ambiente
 che viene rilevata dal sensore di temperatura. <br>
-Può essere impostato premendo contemporaneamente il tasto sinistro del
+PuÃ² essere impostato premendo contemporaneamente il tasto sinistro del
 mouse e il tasto Alt. <br>
 <br>
 </span><img src="scenario.jpg" alt=""><br>
@@ -37,7 +37,7 @@ Programming e New e inserire il nome del progetto Javascript.<br>
 <br>
 
 <span style="font-family: Arial;">Nella cartella SensoreTemperatura
-così creata inserire il seguente codice nel file main.js</span><br>
+cosÃ¬ creata inserire il seguente codice nel file main.js</span><br>
 
 <br>
 
