@@ -19,7 +19,7 @@ takes place in Json format.</span><br>
 
 <br>
 
-<img src="scenario.jpg" alt=""><br>
+<img src="Scenario.jpg" alt=""><br>
 
 <span style="font-family: Arial;">It is necessary to create a database
 called "IoT" and a "sensor1" table in the following format</span><br>
