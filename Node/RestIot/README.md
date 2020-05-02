@@ -33,7 +33,8 @@ PUT http://127.0.0.1:8765/led/0 -i&nbsp;&nbsp; (Spegne il Led 0);<br>
 -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
 -i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 0);</span><br>
 
-<span style="font-family: Arial;">3)</span> <span style="font-family: Arial;">curl -d {\"stato\":\"OFF\"} -H
+<span style="font-family: Arial;">
+3) </span> <span style="font-family: Arial;">curl -d {\"stato\":\"OFF\"} -H
 "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/1
 -i&nbsp;&nbsp; (Spegne il Led 1);<br>
 4) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"}
