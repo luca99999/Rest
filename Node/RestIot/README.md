@@ -17,27 +17,25 @@ sulla porta nota 8765 per la gestione dei dispositivi collegati. <br>
 Ogni risorsa è identificata univocamente da un URI:<br>
 <br>
 1) Il Led 0 è identificato dall'URI http://127.0.0.1:8765/led/0;<br>
-2) </span><span style="font-family: Arial;"> Il Led 1 è identificato
-dall'URI http://127.0.0.1:8765/led/1;</span><br>
+2) Il Led 1 è identificato dall'URI http://127.0.0.1:8765/led/1;<br>
+3) Il potenziometro è identificato
+dall'URI http://127.0.0.1:8765/potenziometro/2;<br>
 
-<span style="font-family: Arial;">3) Il potenziometro è identificato
-dall'URI http://127.0.0.1:8765/potenziometro/2</span>;<br>
-
-<span style="font-family: Arial;"><br>
+<br>
 Le azioni che consentono di modificare lo stato dei led e di leggere la
 tensione sul potenziometro sono:<br>
 <br>
 1) curl -d {\"stato\":\"OFF\"} -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0 -i&nbsp;&nbsp; (Spegne il Led 0);<br>
 2) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"} -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
--i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 0);</span>
+  -i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 0);
 <br>
-3) </span> <span style="font-family: Arial;">curl -d {\"stato\":\"OFF\"} -H
+3) curl -d {\"stato\":\"OFF\"} -H
 "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/1
 -i&nbsp;&nbsp; (Spegne il Led 1);<br>
-4) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"}
+4) curl -d {\"stato\":\"ON\"}
 -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
--i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 1);</span><br>
-5)</span> <span style="font-family: Arial;">curl -d {\"azione\":\"READ\"} -H
+-i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 1);<br>
+5) curl -d {\"azione\":\"READ\"} -H
 "Content-Type: application/json" -X GET
 http://127.0.0.1:8765/potenziometro/2 -i</span>&nbsp;&nbsp; <span style="font-family: Arial;">(Legge il valore della tensione in uscita
 sul potenziometro)</span>;<br>
