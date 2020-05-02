@@ -27,21 +27,17 @@ dall'URI http://127.0.0.1:8765/potenziometro/2</span>;<br>
 Le azioni che consentono di modificare lo stato dei led e di leggere la
 tensione sul potenziometro sono:<br>
 <br>
-1) curl -d {\"stato\":\"OFF\"} -H "Content-Type: application/json" -X
-PUT http://127.0.0.1:8765/led/0 -i&nbsp;&nbsp; (Spegne il Led 0);<br>
-2) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"}
--H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
--i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 0);</span><br>
-
-<span style="font-family: Arial;">
+1) curl -d {\"stato\":\"OFF\"} -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0 -i&nbsp;&nbsp; (Spegne il Led 0);<br>
+2) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"} -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
+-i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 0);</span>
+<br>
 3) </span> <span style="font-family: Arial;">curl -d {\"stato\":\"OFF\"} -H
 "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/1
 -i&nbsp;&nbsp; (Spegne il Led 1);<br>
 4) </span><span style="font-family: Arial;">curl -d {\"stato\":\"ON\"}
 -H "Content-Type: application/json" -X PUT http://127.0.0.1:8765/led/0
 -i&nbsp;&nbsp;&nbsp;&nbsp; (Accende il Led 1);</span><br>
-
-<span style="font-family: Arial;">5)</span> <span style="font-family: Arial;">curl -d {\"azione\":\"READ\"} -H
+5)</span> <span style="font-family: Arial;">curl -d {\"azione\":\"READ\"} -H
 "Content-Type: application/json" -X GET
 http://127.0.0.1:8765/potenziometro/2 -i</span>&nbsp;&nbsp; <span style="font-family: Arial;">(Legge il valore della tensione in uscita
 sul potenziometro)</span>;<br>
