@@ -2,7 +2,7 @@
 <html><head>
   
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title></title>
+  
 
   
 </head><body>
@@ -14,13 +14,13 @@ dipositivi IoT tramite Server Rest in Javascript Packet Tracer</span></span></h1
 <span style="font-family: Arial;">La scheda SBC0 esegue un server Rest
 sulla porta nota 8765 per la gestione dei dispositivi collegati. <br>
 <br>
-Ogni risorsa è identificata univocamente da un URI:<br>
+Ogni risorsa Ã¨ identificata univocamente da un URI:<br>
 <br>
-1) Il Led 0 è identificato dall'URI http://127.0.0.1:8765/led/0;<br>
-2) </span><span style="font-family: Arial;"> Il Led 1 è identificato
+1) Il Led 0 Ã¨ identificato dall'URI http://127.0.0.1:8765/led/0;<br>
+2) </span><span style="font-family: Arial;"> Il Led 1 Ã¨ identificato
 dall'URI http://127.0.0.1:8765/led/1;</span><br>
 
-<span style="font-family: Arial;">3) Il potenziometro è identificato
+<span style="font-family: Arial;">3) Il potenziometro Ã¨ identificato
 dall'URI http://127.0.0.1:8765/potenziometro/2</span>;<br>
 
 <span style="font-family: Arial;"><br>
